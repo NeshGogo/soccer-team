@@ -1,7 +1,7 @@
 <section class="container">
     <h1 class="container--title">Players</h1>
     <div class="container__actions">
-        <button class="container__actions--btn" (click)="newPlayer()">New Player</button>
+        <button class="btn btn-new" (click)="newPlayer()">New Player</button>
     </div>
     <div>
         <table class="container__table" cellpadding="0" cellspacing="0" border="0">
@@ -27,8 +27,8 @@
                     <td>{{player.nationality}}</td>
                     <td>{{player.leftFooted}}</td>
                     <td>
-                        <button (click)="editPlayer(player)">Edit</button>
-                        <button>Delete</button>
+                        <button class="btn btn-edit" (click)="editPlayer(player)">Edit</button> |
+                        <button class="btn btn-delete" (click)="deletePlayer(player)">Delete</button>
                     </td>
                 </tr>
             </tbody>

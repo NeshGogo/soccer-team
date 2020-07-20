@@ -14,7 +14,7 @@ $ceruleanBlue: #3aaed8;
     margin-left: 5%;
     margin-bottom: 10px;
 }
-.container__actions--btn{
+.btn{
     border:none;
     color: white;
     padding: 10px;
@@ -26,15 +26,24 @@ $ceruleanBlue: #3aaed8;
         border: none;
         outline: none;
     }
+    &:active{
+        outline: none;
+        border: none;
+    }
 }
-.container__actions--btn:hover{
+.btn-new:hover{
     background-color: $ceruleanBlue;
     cursor: pointer;
 }
-.container__actions--btn:active{
-    outline: none;
-    border: none;
+.btn-edit:hover{
+    background-color: #f6bd60;
+    cursor: pointer;
 }
+.btn-delete:hover{
+    background-color: #e63946;
+    cursor: pointer;
+}
+
 
 .container__table{
     margin: 0 auto;

@@ -70,7 +70,7 @@ export class PlayerDialogComponent implements OnInit {
       key: this.player.$key,
     };
     const moddifiedPlayers = this.team.players
-      ? this.team.players.map((player) => {
+      ? this.team.players.map((player: any) => {
           return player.key === this.player.$key
             ? playerFormValueWithFormattedKey
             : player;
@@ -89,19 +89,17 @@ export class PlayerDialogComponent implements OnInit {
   }
 
   onSubmit(playerForm: NgForm): void {
+    console.log(playerForm.value);
     const playerFormValue = { ...playerForm.value };
+    console.log(playerFormValue);
     if (playerForm.valid) {
-      playerFormValue.leftFooted =
-        playerFormValue.leftFooted === '' ||
-        playerFormValue.leftFooted === undefined
-          ? false
-          : true;
+      if (this.player) {
+        this.editPlayer(playerFormValue);
+      } else {
+        this.newPlayer(playerFormValue);
+      }
     }
-    if (this.player) {
-      this.editPlayer(playerFormValue);
-    } else {
-      this.newPlayer(playerFormValue);
-    }
+    
     this.onClose();
     window.location.replace('#');
   }

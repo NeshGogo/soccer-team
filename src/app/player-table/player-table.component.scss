@@ -1,0 +1,58 @@
+$ceruleanBlue: #3aaed8;
+.container{
+    margin: 100px 0;
+}
+
+.container--title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.container__actions{
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+.container__actions--btn{
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-weight: bold;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+}
+.container__actions--btn:hover{
+    background-color: $ceruleanBlue;
+    cursor: pointer;
+}
+.container__actions--btn:active{
+    outline: none;
+    border: none;
+}
+
+.container__table{
+    margin: 0 auto;
+    width: 90%;
+    border: 0.1px solid;
+    table-layout: fixed;
+}
+
+.container__table--header{
+    background-color: rgba($color: #fff, $alpha: 0.2);
+}
+
+.container__table--header tr th{
+    text-align: left;
+    padding: 20px;
+    text-transform: uppercase;
+    border-bottom: 0.1px solid;
+}
+.container__table--body{
+    min-height: 100px;
+    display: block;
+}
+.container__table--body tr td{
+    padding: 20px;
+    border-bottom: 0.1px solid;
+}

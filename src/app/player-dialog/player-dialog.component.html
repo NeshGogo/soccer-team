@@ -1,0 +1,49 @@
+<div id="open-modal" class="modal-window">
+    <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h1>New Player Form</h1>
+        <div>
+            <form #playerForm="ngForm" novalidate (ngSubmit)="onSubmit(playerForm)">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" [ngModel]="playerForm?.name" ngModel required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" [ngModel]="playerForm?.lastName" ngModel required>
+                </div>
+                <div>
+                    <label for="position">Position</label>
+                    <select name="position" [ngModel]="playerForm?.position" ngModel required>
+                        <option *ngFor="let position of squadNumber" [value]="position.key">
+                            {{position.label}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="weight">Weight</label>
+                    <input type="number" name="weight" [ngModel]="playerForm?.weight" ngModel required>
+                </div>
+                <div>
+                    <label for="height">Height</label>
+                    <input type="number" name="height" [ngModel]="playerForm?.height" ngModel required>
+                </div>
+                <div>
+                    <label for="nationality">Nationality</label>
+                    <select name="nationality" [ngModel]="playerForm?.nationality" ngModel required>
+                        <option *ngFor="let nationality of countries" [value]="nationality.key">
+                            {{nationality.label}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="leftFooted">Left Footed</label>
+                    <input type="text" name="leftFooted" [ngModel]="playerForm?.leftFooted" ngModel required>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.container{
+    margin: 100px 0;
+}
+
+.container--title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.container__table{
+    margin: 0 auto;
+    width: 80%;
+    border: 0.1px solid;
+    table-layout: fixed;
+}
+
+.container__table--header{
+    background-color: rgba($color: #fff, $alpha: 0.2);
+}
+
+.container__table--header tr th{
+    text-align: left;
+    padding: 20px;
+    text-transform: uppercase;
+    border-bottom: 0.1px solid;
+}
+
+.container__table--body tr td{
+    padding: 20px;
+    border-bottom: 0.1px solid;
+}

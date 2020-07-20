@@ -16,11 +16,16 @@ $ceruleanBlue: #3aaed8;
 }
 .container__actions--btn{
     border:none;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
     font-weight: bold;
     background-color: rgba($color: #fff, $alpha: 0.2);
+    &:focus{
+        border: none;
+        outline: none;
+    }
 }
 .container__actions--btn:hover{
     background-color: $ceruleanBlue;
@@ -49,8 +54,7 @@ $ceruleanBlue: #3aaed8;
     border-bottom: 0.1px solid;
 }
 .container__table--body{
-    min-height: 100px;
-    display: block;
+
 }
 .container__table--body tr td{
     padding: 20px;

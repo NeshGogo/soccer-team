@@ -1,0 +1,98 @@
+$fontBlack: #333333;
+$backGroundInput: #f6f6f6;
+$zoapGreen: #52aa8a;
+
+.modal-window{
+    position: fixed;
+    background-color: rgba($color: #fff, $alpha: 0.25);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    &:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    & > div{
+        background: white;
+        width: 400px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 2em;
+        color: $fontBlack;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 150%;
+        text-align: center;
+        color: $fontBlack;
+        margin-bottom: 30px;
+    }
+    .modal-close{
+        margin-left: 95%;
+        text-decoration: none;
+        font-size: 2em;
+        color: $fontBlack;
+    }
+    .form-control{
+        margin-bottom: 10px;
+        label{
+            width: 100px;
+            padding: 3px 13px 0 0;
+            font-size: 14px;
+            display: block;
+            float: left;
+            text-align: right;
+        }
+
+        input,
+        textarea,
+        select{
+            width: 235px;
+            background-color: $backGroundInput;
+            border: 1px solid $zoapGreen;
+            border-radius: 4px;
+            color: black;
+            padding: 5px;
+        }
+
+        select{
+            width: 246px;
+        }
+        .checkbox{
+            width: auto;
+        }
+
+
+    }
+    .submit-container{
+        margin-top: 20px;
+        text-align: right;
+    }
+    .btn-submit{
+        border: 1px solid $zoapGreen;
+        background-color: $zoapGreen;
+        padding: 8px 25px;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        border-radius: 15px;
+        &:active{
+            border: none;
+            outline: none;
+        }
+        &:focus{
+            border: none;
+            outline: none;
+        }
+    }
+}

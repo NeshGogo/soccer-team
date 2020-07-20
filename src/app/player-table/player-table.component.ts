@@ -26,4 +26,14 @@ export class PlayerTableComponent implements OnInit {
       window.location.replace('#open-modal');
     }, 0 );
   }
+  editPlayer(player: Player): void{
+    this.selectedPlayer = {...player};
+    this.showModal = true;
+    setTimeout(() => {
+      window.location.replace('#open-modal');
+    }, 0 );
+  }
+  closeDialog(): void{
+    this.showModal = false;
+  }
 }

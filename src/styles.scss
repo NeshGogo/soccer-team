@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+$zoapGreen: #52aa8a;
+$ceruleanBlue: #3aaed8;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient($zoapGreen, $ceruleanBlue);
+  background-repeat: no-repeat;
+}
